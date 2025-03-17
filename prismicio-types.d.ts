@@ -156,6 +156,17 @@ interface SettingsDocumentData {
   navigation: prismic.GroupField<Simplify<SettingsDocumentDataNavigationItem>>;
 
   /**
+   * logo field in *settings*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.logo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  logo: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *settings*
    *
    * - **Field Type**: Slice Zone
