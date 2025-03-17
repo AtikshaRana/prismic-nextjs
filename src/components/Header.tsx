@@ -18,7 +18,6 @@ export default async function Header() {
             />
           )}
         </Link>
-
         {/* Navigation */}
         <nav>
           <ul className="flex items-center gap-6">
