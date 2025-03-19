@@ -1,0 +1,111 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+					"width": 3456,
+					"height": 3456
+				},
+				"url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+				"width": 3456,
+				"height": 3456,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "education",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Allow"
+						}
+					}
+				]
+			},
+			"blurb": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Cillum dolore magna velit nostrud aliqua commodo labore ullamco est est laboris ex anim ut. Mollit anim incididunt nostrud ad excepteur occaecat exercitation."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "textWithImage",
+		"primary": {
+			"image": {
+				"origin": {
+					"id": "main",
+					"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+					"width": 3277,
+					"height": 4092
+				},
+				"url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+				"width": 3277,
+				"height": 4092,
+				"edit": {
+					"zoom": 1,
+					"crop": {
+						"x": 0,
+						"y": 0
+					},
+					"background": "transparent"
+				},
+				"alt": "perhaps",
+				"credits": null,
+				"__TYPE__": "ImageContent",
+				"thumbnails": {}
+			},
+			"heading": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Stiff"
+						}
+					}
+				]
+			},
+			"blurb": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ad magna pariatur aute nisi cupidatat incididunt mollit non eu sint. Pariatur nostrud commodo excepteur fugiat laboris aliquip ea nulla ullamco et nostrud occaecat duis tempor. Commodo dolore et irure do eiusmod est aute ad ipsum."
+						}
+					}
+				]
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]
