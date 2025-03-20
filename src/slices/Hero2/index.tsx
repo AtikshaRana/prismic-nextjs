@@ -1,7 +1,6 @@
 import { FC } from "react";
-import { Content, isFilled } from "@prismicio/client";
-import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
-import { PrismicNextLink, PrismicNextImage } from "@prismicio/next";
+import { Content } from "@prismicio/client";
+import { SliceComponentProps } from "@prismicio/react";
 import Bounded from "@/components/Bounded";
 export type Hero2Props = SliceComponentProps<Content.Hero2Slice>;
 
