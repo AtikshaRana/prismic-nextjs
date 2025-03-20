@@ -1,26 +1,60 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
-import { SliceComponentProps } from "@prismicio/react";
+import { SliceComponentProps, PrismicRichText, JSXMapSerializer } from "@prismicio/react";
+import Bounded from "@/components/Bounded";
+import { PrismicNextImage } from "@prismicio/next";
+import clsx from "clsx";
+
+ 
+/**
+ * Props for `ImageTextComponent`.
+ */
+export type ImageTextProps = SliceComponentProps<Content.ImageWithTextSlice>;
+
+
+const components: JSXMapSerializer = {
+  heading2: ({ children }) => (
+    <h2 className="text-3xl font-bold text-gray-800 mb-4">{children}</h2>
+  ),
+  paragraph: ({ children }) => (
+    <p className="text-lg text-gray-600">{children}</p>
+  ),
+};
 
 /**
- * Props for `ImageWithText`.
+ * Component for "Image and Text" Slices.
  */
-export type ImageWithTextProps =
-  SliceComponentProps<Content.ImageWithTextSlice>;
+const ImageText: FC<ImageTextProps> = ({ slice }) => {
+  // Determine layout based on variation
+  const isTextWithImage = slice.variation === "textWithImage";
+console.log(slice.variation);
 
-/**
- * Component for "ImageWithText" Slices.
- */
-const ImageWithText: FC<ImageWithTextProps> = ({ slice }) => {
   return (
-    <section
-      data-slice-type={slice.slice_type}
-      data-slice-variation={slice.variation}
-    >
-      Placeholder component for image_with_text (variation: {slice.variation})
-      Slices
-    </section>
+    <Bounded className="py-16">
+      <div
+        className={clsx(
+          "flex flex-col md:flex-row items-center gap-8",
+          isTextWithImage ? "md:flex-row-reverse" : ""
+        )}
+      >
+        {/* Image Section */}
+        {slice.primary.image && (
+          <div className="w-full md:w-1/2">
+            <PrismicNextImage
+              field={slice.primary.image}
+              className="w-full h-[300px] md:h-[400px] object-cover rounded-lg shadow-md"
+            />
+          </div>
+        )}
+
+        {/* Text Section */}
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <PrismicRichText components={components} field={slice.primary.heading} />
+          <PrismicRichText components={components} field={slice.primary.blurb} />
+        </div>
+      </div>
+    </Bounded>
   );
 };
 
-export default ImageWithText;
+export default ImageText;
