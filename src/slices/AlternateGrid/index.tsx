@@ -2,12 +2,12 @@ import { FC } from "react";
 import { Content, isFilled } from "@prismicio/client";
 import { SliceComponentProps, PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-
+import Bounded from "@/components/Bounded";
 export type GridSectionProps = SliceComponentProps<Content.AlternateGridSlice>;
 
 const GridSection: FC<GridSectionProps> = ({ slice }) => {
   return (
-    <section
+    <Bounded
       data-type={slice.slice_type}
       data-variation={slice.variation}
       className="grid-section-wrapper"
@@ -70,7 +70,6 @@ const GridSection: FC<GridSectionProps> = ({ slice }) => {
         {`
           .grid-section-wrapper {
             padding: 6vw 1.5rem;
-            background: #f9f9f9;
             font-family: Arial, sans-serif;
             color: #222;
           }
@@ -153,7 +152,7 @@ const GridSection: FC<GridSectionProps> = ({ slice }) => {
           }
         `}
       </style>
-    </section>
+    </Bounded>
   );
 };
 
